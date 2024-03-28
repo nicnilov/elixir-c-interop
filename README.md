@@ -6,7 +6,7 @@
 
 ### A C/C++ compiler
 
-This project makes no assumptions about the c/c++ compiler except is should be callable by `cc`.
+This project makes no assumptions about the c/c++ compiler except that is should be callable by the `cc` name.
 
 ### Elixir / Erlang runtime
 
@@ -14,13 +14,13 @@ This project makes no assumptions about the c/c++ compiler except is should be c
 
 * Dockerized setup is possible but is not provided for. Use one of the Elixir images https://hub.docker.com/_/elixir. This project currenly depends on Elixir 1.16.x. 
 
-* For a version-managed setup using asdf follow the steps below.
+* For a version-managed setup using `asdf` follow the steps below.
 
 ---
 
 1. Install asdf: https://asdf-vm.com/guide/getting-started.html
 
-2. Update the asdf's internal data:
+2. Update the asdf's internal data (if installed before):
 
 ```
 asdf update
@@ -60,4 +60,16 @@ If compiling the C code manually, make sure to provide the `ERTS_INCLUDE_DIR` en
 
 ```
 /<home>/<user>/.asdf/installs/erlang/26.2.1/erts-14.2.1/include
+```
+
+Alternatively, use Elixir's REPL to interact with the code:
+
+```
+iex -S mix
+
+> Interactive Elixir (1.16.2) - press Ctrl+C to exit (type h() ENTER for help)
+
+iex(1)> Nifs.add(2, 3)
+
+> 5
 ```
