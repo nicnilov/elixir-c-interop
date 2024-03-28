@@ -54,13 +54,7 @@ From the project root directory run:
 mix test
 ```
 
-This should compile the C code using the provided `Makefile`, compile the Elixir code, and run the test examples found under the `apps/` directory.
-
-If compiling the C code manually, make sure to provide the `ERTS_INCLUDE_DIR` env var, pointing to the Erlang's ERTS include directory. An example path may look like this:
-
-```
-/<home>/<user>/.asdf/installs/erlang/26.2.1/erts-14.2.1/include
-```
+This should compile the C code using the provided `Makefile`, compile the Elixir code, and run the test examples it can find under the `apps/` directory.
 
 Alternatively, use Elixir's REPL to interact with the code:
 
@@ -72,4 +66,10 @@ iex -S mix
 iex(1)> Nifs.add(2, 3)
 
 > 5
+```
+
+If compiling the C code manually, make sure to provide the `ERTS_INCLUDE_DIR` env var, pointing to the Erlang's ERTS include directory. An example path may look like this:
+
+```
+/<home>/<user>/.asdf/installs/erlang/26.2.1/erts-14.2.1/include
 ```
